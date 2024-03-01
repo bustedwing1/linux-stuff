@@ -115,8 +115,8 @@ cat blinky.hex | sed 's/^..\(....\).*/\1/'
 cat blinky.hex | sed 's/^.*\([^0]\)\(..\)\(.\).*/\1,\2,\3/'
 ```
 
-OPUS
-----
+OPUS (Convert $readmemh format to verilog memory initial block assignments
+--------------------------------------------------------------------------
 
 ```bash
 nl -v 0 blinky.hex |sed "s/^\s*\(\w*\)\s*\(\w*\).*$/mem[\1] = 32'h\2;/
